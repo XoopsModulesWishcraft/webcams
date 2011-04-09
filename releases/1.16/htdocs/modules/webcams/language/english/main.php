@@ -1,0 +1,404 @@
+<?php
+
+// Messages
+define('_wbc_mn_msg_createdokey', 'The item you wish to create was made completely successfully!');
+
+// Form Headers
+define('_wbc_mn_new', 'Create New -');
+define('_wbc_mn_host_h1', 'Webcam Host');
+define('_wbc_mn_host_p', 'From here you can edit or create a new host. It is a standard form to save the webcam host.');
+define('_wbc_mn_user_h1', 'Webcam User');
+define('_wbc_mn_user_p', 'From here you can edit or create a new webcam user.');
+define('_wbc_mn_studio_h1', 'Webcam Studio');
+define('_wbc_mn_studio_p', 'From here we make a studio for webcams you can create or edit one with this form.');
+
+// Email
+define('_wbc_email_host_subject', 'Successful creating user %s on %s webcam hosting');
+define('_wbc_email_host_subject_approved', 'Your Webcam Host Account has been Approved');
+define('_wbc_email_studio_subject_approved', 'Your Webcam Studio Account Waiting for Approval');
+define('_wbc_email_host_subject_waiting', 'Your Webcam Host Account is Waiting for Approval');
+define('_wbc_email_studio_subject_waiting', 'Your Webcam Studio Account has been Approved');
+define('_wbc_email_host_subject_closed', 'Your Webcam Host Account has been Closed Down');
+define('_wbc_email_studio_subject_closed', 'Your Webcam Studio Account has been Closed Down');
+
+//Forms
+define('_wbc_mn_frm_email', 'Your Email Address');
+define('_wbc_mn_frm_email_desc', '');
+define('_wbc_mn_frm_user', 'Your username');
+define('_wbc_mn_frm_user_desc', '[a-zA-Z0-9] max 20 chars');
+define('_wbc_mn_frm_pass', 'Your password');
+define('_wbc_mn_frm_pass_desc', '[a-zA-Z0-9] max 20 chars');
+define('_wbc_mn_frm_firstname', 'Firstname');
+define('_wbc_mn_frm_firstname_desc', '');
+define('_wbc_mn_frm_lastname', 'Lastname');
+define('_wbc_mn_frm_lastname_desc', '');
+define('_wbc_mn_frm_address1', 'Address line 1');
+define('_wbc_mn_frm_address1_desc', '');
+define('_wbc_mn_frm_address2', 'Address line 2');
+define('_wbc_mn_frm_address2_desc', '');
+define('_wbc_mn_frm_city', 'City/Town/Suburb');
+define('_wbc_mn_frm_city_desc', '');
+define('_wbc_mn_frm_state', 'State code');
+define('_wbc_mn_frm_state_desc', '');
+define('_wbc_mn_frm_postcode', 'Postcode/ZIP');
+define('_wbc_mn_frm_postcode_desc', '');
+define('_wbc_mn_frm_country', 'Country Code');
+define('_wbc_mn_frm_country_desc', '');
+define('_wbc_mn_frm_phone', 'Your Phone Number');
+define('_wbc_mn_frm_phone_desc', '(Mobile)');
+define('_wbc_mn_frm_age', 'Your age');
+define('_wbc_mn_frm_age_desc', '');
+define('_wbc_mn_frm_pref', 'Preference/Orintation');
+define('_wbc_mn_frm_pref_desc', '');
+define('_wbc_mn_frm_local', 'Your local area is called!');
+define('_wbc_mn_frm_local_desc', '');
+define('_wbc_mn_frm_likes', 'Likes');
+define('_wbc_mn_frm_likes_desc', 'Seperatewith a comma');
+define('_wbc_mn_frm_dislikes', 'Dislikes');
+define('_wbc_mn_frm_dislikes_desc', 'Seperate with a comma \',\'');
+define('_wbc_mn_frm_bio', 'Chat Bio');
+define('_wbc_mn_frm_bio_desc', '');
+define('_wbc_mn_frm_chat', 'Chat Signature');
+define('_wbc_mn_frm_chat_desc', '');
+define('_wbc_mn_frm_languages', 'Supported languages');
+define('_wbc_mn_frm_languages_desc', '');
+define('_wbc_mn_frm_category', 'Category');
+define('_wbc_mn_frm_category_desc', '');
+define('_wbc_mn_frm_timezone', 'Timezone');
+define('_wbc_mn_frm_timezone_desc', '');
+define('_wbc_mn_frm_studioname', 'Studio Name');
+define('_wbc_mn_frm_studioname_desc', '');
+define('_wbc_mn_frm_allow_create_host', 'Allow studio to create host!');
+define('_wbc_mn_frm_allow_create_host_desc', '');
+define('_wbc_mn_frm_tip2', 'Group chat tip percentile');
+define('_wbc_mn_frm_tip2_desc', '');
+define('_wbc_mn_frm_tip3', 'Private chat tip percentile');
+define('_wbc_mn_frm_tip3_desc', '');
+define('_wbc_mn_frm_max_time', 'Maximum time allowed!');
+define('_wbc_mn_frm_max_time_desc', '');
+define('_wbc_mn_frm_max_time_total', 'Total time per session allowed!');
+define('_wbc_mn_frm_max_time_total_desc', '');
+define('_wbc_mn_frm_max_time_total_period', 'Time period in minutes for sessions.');
+define('_wbc_mn_frm_max_time_total_period_desc', '');
+define('_wbc_mn_frm_mode1', 'Allow free chat?');
+define('_wbc_mn_frm_mode1_desc', '');
+define('_wbc_mn_frm_mode2', 'Allow group chat?');
+define('_wbc_mn_frm_mode2_desc', '');
+define('_wbc_mn_frm_mode3', 'Allow Private Chat?');
+define('_wbc_mn_frm_mode3_desc', '');
+define('_wbc_mn_frm_allow_guest', 'Allow Guests');
+define('_wbc_mn_frm_allow_guest_desc', '');
+define('_wbc_mn_frm_pay2', 'Group chat per minute cost');
+define('_wbc_mn_frm_pay2_desc', '299 = $2.99');
+define('_wbc_mn_frm_pay3', 'Private chat per minute cost');
+define('_wbc_mn_frm_pay3_desc', '299 = $2.99');
+define('_wbc_mn_frm_com2', 'Group chat commission percentile');
+define('_wbc_mn_frm_com2_desc', '');
+define('_wbc_mn_frm_com3', 'Private chat commission percentile');
+define('_wbc_mn_frm_com3_desc', '');
+define('_wbc_mn_frm_tip_com2', 'Group chat tip percentile');
+define('_wbc_mn_frm_tip_com2_desc', '');
+define('_wbc_mn_frm_tip_com3', 'Private chat tip percentile');
+define('_wbc_mn_frm_tip_com3_desc', '');
+define('_wbc_mn_frm_max_streams', 'Maximum number of guest streams.');
+define('_wbc_mn_frm_max_streams_desc', '');
+define('_wbc_mn_frm_view_user_bal', 'Allow to see user balance');
+define('_wbc_mn_frm_view_user_bal_desc', '');
+define('_wbc_mn_frm_profile', 'Display Profile');
+define('_wbc_mn_frm_profile_desc', '');
+define('_wbc_mn_frm_media', 'Display Media');
+define('_wbc_mn_frm_media_desc', '');
+define('_wbc_mn_frm_stats', 'Display Stats');
+define('_wbc_mn_frm_stats_desc', '');
+define('_wbc_mn_frm_aim_user', 'AIM Username');
+define('_wbc_mn_frm_aim_user_desc', '');
+define('_wbc_mn_frm_aim_pass', 'AIM Password');
+define('_wbc_mn_frm_aim_pass_desc', '');
+define('_wbc_mn_frm_pos_bias', 'Position Bias');
+define('_wbc_mn_frm_pos_bias_desc', '0-100');
+define('_wbc_mn_frm_allow_ban', 'Allow Banning of Guest and Users');
+define('_wbc_mn_frm_allow_ban_desc', '(not recommended)');
+define('_wbc_mn_frm_aux_link1_url', 'Aux URL 1');
+define('_wbc_mn_frm_aux_link1_url_desc', '');
+define('_wbc_mn_frm_aux_link1_txt', 'Aux Link Text 1');
+define('_wbc_mn_frm_aux_link1_txt_desc', '');
+define('_wbc_mn_frm_aux_link2_url', 'Aux URL 2');
+define('_wbc_mn_frm_aux_link2_url_desc', '');
+define('_wbc_mn_frm_aux_link2_txt', 'Aux Link Text 2');
+define('_wbc_mn_frm_aux_link2_txt_desc', '');
+define('_wbc_mn_frm_aux_link3_url', 'Aux URL 3');
+define('_wbc_mn_frm_aux_link3_url_desc', '');
+define('_wbc_mn_frm_aux_link3_txt', 'Aux Link Text 3');
+define('_wbc_mn_frm_aux_link3_txt_desc', '');
+define('_wbc_mn_frm_studio_id', 'Studio ID');
+define('_wbc_mn_frm_studio_id_desc', '');
+define('_wbc_mn_frm_chat_only', 'Chat only?');
+define('_wbc_mn_frm_chat_only_desc', '');
+
+// Form Titles
+define('_wbc_mn_frm_add_host', 'Add new webcam host');
+define('_wbc_mn_frm_edit_host', 'Edit existing webcam host');
+define('_wbc_mn_frm_add_user', 'Add new member user');
+define('_wbc_mn_frm_edit_user', 'Edit existing member');
+define('_wbc_mn_frm_edit_studio', 'Add new studio');
+define('_wbc_mn_frm_add_studio', 'Edit existing studio');
+
+// Configuration for configuration.xml
+define("_wbc_mn_connectingTxt", "Connecting");
+define("_wbc_mn_connectingTxtClr", "0x888888");
+define("_wbc_mn_connectingBgClr", "0xffffff");
+define("_wbc_mn_disconnectingTxt", "Disconnecting");
+define("_wbc_mn_disconnectingTxtClr", "0x888888");
+define("_wbc_mn_disconnectingBgClr", "0xffffff");
+define("_wbc_mn_contactingHostTxt", "Contacting Host");
+define("_wbc_mn_contactingHostTxtClr", "0x888888");
+define("_wbc_mn_contactingHostBgClr", "0xffffff");	
+	
+define("_wbc_mn_helpTxt", "/help");
+define("_wbc_mn_kickTxt", "/kick");
+define("_wbc_mn_kickDescription", "kick user (moderator only)");	
+define("_wbc_mn_banTxt", "/ban");
+define("_wbc_mn_banDescription", "ban user (moderator only)");	
+define("_wbc_mn_whoTxt", "/who");
+define("_wbc_mn_whoDescription", "show list of users");	
+define("_wbc_mn_msgTxt", "/msg");
+define("_wbc_mn_msgDescription", "send private message to user or host");	
+define("_wbc_mn_clearTxt", "/clear");
+define("_wbc_mn_clearDescription", "clear chat window");	
+define("_wbc_mn_exitTxt", "/exit");
+define("_wbc_mn_exitDescription", "leave chat room");	
+	
+define("_wbc_mn_menuBarHeight", "20");
+define("_wbc_mn_menuTxtFmt_size", "11");
+define("_wbc_mn_menuTxtFmt_bold", "1");
+define("_wbc_mn_menuTxtFmt_fontFamily", "Verdana");
+define("_wbc_mn_menuHoverClr", "0x0096ff");
+define("_wbc_mn_menuHoverClrAlpha", "0.1");
+define("_wbc_mn_menuOnClr", "0x666666");
+define("_wbc_mn_menuOffClr", "0x999999");
+define("_wbc_mn_menuGradientTop", "0xf5f5f5");
+define("_wbc_mn_menuGradientTopToMiddle", "0xececec");
+define("_wbc_mn_menuGradientMiddle", "0xd7d7d7");
+define("_wbc_mn_menuGradientMiddleToBottom", "0xc7c7c7");
+define("_wbc_mn_menuLowerShadow", "0x000000");
+define("_wbc_mn_menuBorder", "0xa3a3a3");
+define("_wbc_mn_menuInnerHighlight", "0xffffff");	
+	
+define("_wbc_mn_statsButtonTxt", "Stats");
+define("_wbc_mn_tipsButtonTxt", "Tips");
+define("_wbc_mn_ppmButtonTxt", "Enter Pay Per Minute");
+define("_wbc_mn_alertsButtonTxt", "Alerts");
+define("_wbc_mn_logoutButtonTxt", "");	
+define("_wbc_mn_enterTxt", "Enter");
+define("_wbc_mn_okTxt", "OK" );
+define("_wbc_mn_cancelTxt", "Cancel");
+define("_wbc_mn_closeTxt", "Close");
+define("_wbc_mn_showBalanceInPPM", "1");
+define("_wbc_mn_yourBalanceTxt", "Balance: ");
+define("_wbc_mn_agreeToCharges", " I agree to the charges above");
+	
+define("_wbc_mn_buttonHeight", "22");
+define("_wbc_mn_buttonWidth", "80");
+define("_wbc_mn_buttonTxtFmt_size", "11");
+define("_wbc_mn_buttonTxtFmt_bold", "1");
+define("_wbc_mn_buttonTxtFmt_fontFamily", "Verdana");
+define("_wbc_mn_buttonHoverClr", "0x0096ff");
+define("_wbc_mn_buttonHoverClrAlpha", "0.1");
+define("_wbc_mn_buttonOnClr", "0x666666");
+define("_wbc_mn_buttonOffClr", "0x999999");
+define("_wbc_mn_buttonGradientTop", "0xf5f5f5");
+define("_wbc_mn_buttonGradientTopToMiddle", "0xececec");
+define("_wbc_mn_buttonGradientMiddle", "0xd7d7d7");
+define("_wbc_mn_buttonGradientMiddleToBottom", "0xc7c7c7");
+define("_wbc_mn_buttonLowerShadow", "0x000000");
+define("_wbc_mn_buttonBorder", "0xa3a3a3");
+define("_wbc_mn_buttonInnerHighlight", "0xffffff");		
+	
+define("_wbc_mn_radioButtonTxtFmt_size", "11");
+define("_wbc_mn_radioButtonTxtFmt_bold", "1");
+define("_wbc_mn_radioButtonTxtFmt_fontFamily", "Verdana");
+define("_wbc_mn_radioButtonTxtFmt_clr", "0x444444");	
+define("_wbc_mn_radioButtonInnerClr", "0xffffff");
+define("_wbc_mn_radioButtonOuterClr", "0xa3a3a3");
+define("_wbc_mn_radioButtonDotClr", "0x000000");	
+	
+define("_wbc_mn_checkBoxTxtFmt_size", "11");
+define("_wbc_mn_checkBoxTxtFmt_bold", "1");
+define("_wbc_mn_checkBoxTxtFmt_fontFamily", "Verdana");
+define("_wbc_mn_checkBoxTxtFmt_clr", "0x444444");	
+define("_wbc_mn_checkBoxInnerClr", "0xffffff");
+define("_wbc_mn_checkBoxBorderClr", "0xa3a3a3");
+define("_wbc_mn_checkBoxCheckClr", "0x000000");	
+	
+define("_wbc_mn_minimumBalForPPM", "1.00");
+define("_wbc_mn_ppmDialogWidth", "300");
+define("_wbc_mn_ppmDialogHeight", "150");
+define("_wbc_mn_bypassPPMconfirm", "0");
+define("_wbc_mn_alertsOn", "1");
+define("_wbc_mn_emoticons", "1");
+define("_wbc_mn_hostAvatar", ":cam:");
+define("_wbc_mn_hostAvatarChatOnly", ":buddy:");	
+define("_wbc_mn_chatSoundFile", "flash/sounds/Loaded_S-Mark_E_B-8068.mp3");
+define("_wbc_mn_myfavsText", "Add To MyFavs");
+define("_wbc_mn_searchTxt", "search");
+define("_wbc_mn_balance", "N/A");
+define("_wbc_mn_welcomeTxtClr", "0x0000ff");
+define("_wbc_mn_chatWelcomeTxt", "Welcome USER_NAME, you are chatting with HOST_NAME");
+define("_wbc_mn_chatWelcomeTxtChatOnly", "Welcome USER_NAME, you are chatting with HOST_NAME, this room is text chat only");
+define("_wbc_mn_inGroupChatTxt", "You are now in Group Chat");
+define("_wbc_mn_inPrivateChatTxt", "You are now in Private Chat");
+define("_wbc_mn_groupChatTxt", "Group Chat % per minute");
+define("_wbc_mn_privateChatTxt", "Private Chat % per minute");	
+	
+define("_wbc_mn_tip1Txt", "$10 - Thanks");
+define("_wbc_mn_tip1Amount", "10");
+define("_wbc_mn_tip2Txt", "$20 - Cool");
+define("_wbc_mn_tip2Amount", "20");
+define("_wbc_mn_tip3Txt", "$50 - I Love You");
+define("_wbc_mn_tip3Amount", "50");
+define("_wbc_mn_tipReceiptThankYou", "Thank You Very Much !!!!");
+define("_wbc_mn_tipDialogWidth", "280");
+define("_wbc_mn_tipDialogHeight", "160");
+define("_wbc_mn_bypassTipCheck", "0");	
+	
+define("_wbc_mn_statsDialogWidth", "180");
+define("_wbc_mn_statsDialogHeight", "170");
+define("_wbc_mn_statsTxtFmt_color", "0x444444");
+define("_wbc_mn_statsTxtBW", "BW:");
+define("_wbc_mn_statsTxtFPS", "FPS:");
+define("_wbc_mn_statsTxtBytesIn", "Bytes In:");
+define("_wbc_mn_statsTxtTimeOn", "Time On:");
+define("_wbc_mn_statsTxtFrames", "Frames:");
+define("_wbc_mn_statsTxtBal", "Balance:");
+define("_wbc_mn_statsTxtMode", "Mode:");
+define("_wbc_mn_statsTxtBuffer", "Buffer:");
+define("_wbc_mn_showBalanceInStats", "1");	
+		
+define("_wbc_mn_entersTheRoomTxt", "enters the room");
+define("_wbc_mn_leavesTheRoomTxt", "leaves the room");	
+define("_wbc_mn_chatBgClr", "0xffffff");
+define("_wbc_mn_dialogBgClr", "0xffffff");
+define("_wbc_mn_dialogBdrClr", "0x888888");
+define("_wbc_mn_chatAdminTextClr", "0xff0000");
+define("_wbc_mn_chatEnterRoomClr", "0x627188");
+define("_wbc_mn_chatLeaveRoomClr", "0x627188");
+define("_wbc_mn_chatOutOuterGradientTop", "0xf6f6f6");
+define("_wbc_mn_chatOutOuterGradientBottom", "0xcccccc");
+define("_wbc_mn_chatOutInnerGradientTop", "0xcccccc");
+define("_wbc_mn_chatOutInnerGradientBottom", "0xf6f6f6");	
+	
+define("_wbc_mn_chatInTxtFmt_size", "12");
+define("_wbc_mn_chatInTxtFmt_font", "Arial");
+define("_wbc_mn_chatInTxtFmt_leftMargin", "2");
+define("_wbc_mn_chatInTxtFmt_leading", "3" );	
+define("_wbc_mn_chatOutTxtFmt_font", "Arial");
+define("_wbc_mn_chatOutTxtFmt_size", "12");
+define("_wbc_mn_chatOutTxtFmt_color", "0x007699,0x220099,0x7b0099,0x99000b,0x6b0099,0x007799,0x99008a,0x002e99,0x99005e,0x005c99,0x001799,0x005b99,0x009956,0x4c0099,0x560099,0x930099,0x1d0099,0x810099");
+
+define("_wbc_mn_floodDelay", "2");
+define("_wbc_mn_floodWarning", "FLOOD WARNING - Allow more time between messages");
+define("_wbc_mn_floodWarningColor", "0xff0000");	
+	
+define("_wbc_mn_ppmMultiplier", "1.0");
+define("_wbc_mn_ppmShowDecimalPoint", "1");	
+	
+define("_wbc_mn_guestpassBounceToPage", "");
+	
+define("_wbc_mn_bufferFlushSecs", "10");	
+	
+define("_wbc_mn_chatStrokeThickness", "1");
+define("_wbc_mn_chatStroke", "0x909090");
+define("_wbc_mn_chatMediaGap", "5");
+	
+define("_wbc_mn_mediaStrokeThickness", "1");
+define("_wbc_mn_mediaStroke", "0x909090");
+	
+define("_wbc_mn_zoomBarMarginTop", "5");
+define("_wbc_mn_zoomBarStrokeThickness", "1");
+define("_wbc_mn_zoomBarStroke", "0x909090");
+define("_wbc_mn_zoomBarHeight", "26");
+define("_wbc_mn_zoomBarImg", "images/zoombar.png");
+define("_wbc_mn_zoomImg", "images/zoom.png");
+define("_wbc_mn_zoomImgWidth", "30");
+	
+define("_wbc_mn_fullscreenImg", "images/fullscreen.png");
+define("_wbc_mn_muteImg", "images/mute.png");
+define("_wbc_mn_muteImgWidth", "16");
+	
+define("_wbc_mn_sliderTrackImg", "images/slider1.png");
+define("_wbc_mn_sliderTrackImgWidth", "70");
+define("_wbc_mn_sliderKnobImg", "images/sliderknob1.png");
+define("_wbc_mn_sliderKnobImgWidth", "30");
+	
+define("_wbc_mn_backgroundColor", "0xa8a8a8");	
+	
+define("_wbc_mn_themesFolder", "themes");
+define("_wbc_mn_theme", "default");
+define("_wbc_mn_chatWindowMode", "2");
+define("_wbc_mn_hideChat", "0");	
+define("_wbc_mn_initialVolume", "50");
+define("_wbc_mn_lightBoxOpacity", "70");
+define("_wbc_mn_zoomIndexDefault", "0");
+define("_wbc_mn_zoomSizes", "1.0,1.5,2.0");
+define("_wbc_mn_autoCamlistRefresh", "60");
+define("_wbc_mn_chatWidthMinimum", "300");
+define("_wbc_mn_chatWidthNominal", "450");
+define("_wbc_mn_floatingPlayerDivY", "50");
+define("_wbc_mn_floatingPicDivY", "100");
+define("_wbc_mn_loadingImage", "Loading Image ......");
+define("_wbc_mn_perPage", "12");
+define("_wbc_mn_noCamsMessage", "Sorry, Search Returned No Cams");
+define("_wbc_mn_offline", "Offline");
+define("_wbc_mn_freeChat", "Free Chat");
+define("_wbc_mn_groupChat", "Group Chat");
+define("_wbc_mn_privateChat", "Private Chat");
+define("_wbc_mn_bioPics", "Bio &amp; Pics");
+define("_wbc_mn_bioPicsNavCamlist", "Camlist");
+define("_wbc_mn_bioPicsNavFree", "Free Chat");
+define("_wbc_mn_bioPicsNavGroup", "Group Chat");
+define("_wbc_mn_bioPicsNavPrivate", "Private Chat");
+define("_wbc_mn_newHostImage", "newhost");
+	
+define("_wbc_mn_msg0", "Video Chat session has closed");
+define("_wbc_mn_msg1", "Free Chat timed out, log back in if you like");
+define("_wbc_mn_msg2", "Sorry, I'm offline right now");
+define("_wbc_mn_msg3", "Sorry, Server is full, try again later");
+define("_wbc_mn_msg4", "I've gone into Group Chat, come in and join the action");
+define("_wbc_mn_msg5", "I've gone into Private Chat, be back in a few");
+define("_wbc_mn_msg6", "Host did not answer, please try again");
+define("_wbc_mn_msg7", "Your Account balance is too low for Pay Per Minute Chat");
+define("_wbc_mn_msg8", "This Username is already logged In");
+define("_wbc_mn_msg9", "YOU HAVE BEEN KICKED, come back in and be nice");
+define("_wbc_mn_msg10", "Maximum number of users reached for this Account");
+define("_wbc_mn_msg11", "Sorry, my room is full check back in a few minutes");
+define("_wbc_mn_msg12", "Cannot connect to server, please try again in a few minutes");
+define("_wbc_mn_msg13", "Sorry, you have exceeded the permitted free time with this host. Please try later");
+	
+define("_wbc_mn_myfavsUpdate", "updated");
+define("_wbc_mn_myfavsUpdateError", "error");
+define("_wbc_mn_myfavs", "MyFavs");
+define("_wbc_mn_bio", "Bio::");
+define("_wbc_mn_bioName", "Name:");
+define("_wbc_mn_bioAge", "Age:");
+define("_wbc_mn_bioLocation", "Location:");
+define("_wbc_mn_bioOrientation", "Orientation:");
+define("_wbc_mn_bioCategories", "Categories:");
+define("_wbc_mn_bioLanguages", "Languages:");
+define("_wbc_mn_bioAimScreenName", "Aim Screen Name:");
+define("_wbc_mn_bioLikes", "Likes:");
+define("_wbc_mn_bioDislikes", "Dislikes:");
+define("_wbc_mn_bioBlurb", "Blurb:");
+define("_wbc_mn_perMinute", "Per Minute::");
+define("_wbc_mn_groupRate", "Group: ");
+define("_wbc_mn_privateRate", "Private: ");
+define("_wbc_mn_schedule", "Schedule::");
+define("_wbc_mn_adjusted", "Adjusted to your local time");
+define("_wbc_mn_scheduleDays", "Sun,Mon,Tue,Wed,Thr,Fri,Sat");
+define("_wbc_mn_zoomToolTip", "Zoom Video Size");
+define("_wbc_mn_fullscreenToolTip", "Fullscreen - Press ESC to exit");
+define("_wbc_mn_volumeToolTip", "Volume");
+define("_wbc_mn_muteToolTip", "Mute audio");
+define("_wbc_mn_bufferingTime", "1500");
+define("_wbc_mn_defaultCategory", "All");
+
+?>

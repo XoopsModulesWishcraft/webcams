@@ -1,0 +1,30 @@
+<h1><{$smarty.const._wbc_am_hosts_h1}></h1>
+<p><{$smarty.const._wbc_am_hosts_p}></p>
+<div style="float:right;"><{$pagenav}></div>
+<table>
+	<tr class="head">
+		<th><{$hostid_th}></th>
+		<th><{$firstname_th}></th>
+		<th><{$lastname_th}></th>
+		<th><{$phone_th}></th>
+		<th><{$postcode_th}></th>
+		<th><{$country_th}></th>
+		<th><{$email_th}></th>
+		<th><{$smarty.const._wbc_am_th_actions}></th>
+	</tr>
+	<{foreach item=host from=$hosts}>
+	<tr class="<{cycle values="even,odd"}>">
+		<td align='center'><{$host.host_id}></td>
+		<td align='center'><{$host.firstname}></td>
+		<td align='center'><{$host.lastname}></td>
+		<td align='center'><{$host.phone}></td>
+		<td><{$host.postcode}></td>
+		<td><{$host.country}></td>
+		<td><a href="mailto:<{$host.email}>"><{$host.email}></a></td>
+		<td align='center'><a href="<{$php_self}>?op=delete&fct=host&id=<{$host.id}>"><{$smarty.const._wbc_mi_action_delete}></a>&nbsp;<a href="<{$php_self}>?op=edit&fct=host&id=<{$host.id}>"><{$smarty.const._wbc_mi_action_edit}></a><{if $host.status != 'approved'}>&nbsp;<a href="<{$php_self}>?op=approve&fct=host&id=<{$host.id}>"><{$smarty.const._wbc_mi_action_approve}></a><{/if}><{if $host.status != 'closed'}>&nbsp;<a href="<{$php_self}>?op=close&fct=host&id=<{$host.id}>"><{$smarty.const._wbc_mi_action_close}></a><{/if}></td>
+	</tr>
+	<{/foreach}>
+	<tr class="foot">
+		<td colspan="8">&nbsp;</td>
+	</tr>
+</table>

@@ -1,0 +1,44 @@
+<{if $block.key}>
+<p><{$smarty.const._wbc_block_p}></p>
+<form action="<{$xoops_url}>/modules/xpayment/" method="post">
+<!-- This is the header of the invoice -->
+<input type="hidden" name="op" value="createinvoice">
+<input type="hidden" name="plugin" value="webcams">
+<input type="hidden" name="drawfor" value="<{$xoops_sitename}>"><br/>
+<{php}>
+if (is_object($GLOBALS['xoopsUser'])) { <{/php}>
+<label><{$smarty.const._wbc_block_yourname}>&nbsp;<{php}>echo $GLOBALS['xoopsUser']->getVar('name');<{/php}></label><br/>
+<label><{$smarty.const._wbc_block_youremail}>&nbsp;<{php}>echo $GLOBALS['xoopsUser']->getVar('email');<{/php}></label>
+<input type="hidden" name="drawto" value="<{php}>echo $GLOBALS['xoopsUser']->getVar('name');<{/php}>">
+<input type="hidden" name="drawto_email" value="<{php}>echo $GLOBALS['xoopsUser']->getVar('email');<{/php}>">
+<{php}> } else { <{/php}>
+<label><{$smarty.const._wbc_block_yourname}>&nbsp;</label><input type="text" name="drawto" value="" size="15" maxlen="128"><br/>
+<label><{$smarty.const._wbc_block_youremail}>&nbsp;</label><input type="text" name="drawto_email" value="" size="15" maxlen="128"><br/>
+<input type="hidden" name="" value="<{php}>echo $GLOBALS['xoopsUser']->getVar('email');<{/php}>">
+<{php}> } <{/php}>
+<input type="hidden" name="currency" value="<{$block.currency}>">
+<input type="hidden" name="key" value="<{$block.key}>">
+<input type="hidden" name="weight_unit" value="kgs">
+<!-- This is the item trail of the invoice -->
+
+<!-- Example Item A -->
+<input type="hidden" name="item[A][cat]" value="<{$smarty.const._wbc_block_item_cat}>">
+<input type="hidden" name="item[A][name]" value="<{$smarty.const._wbc_block_item_name}>">
+<label>Amount to purchase: </label>
+<select name="item[A][amount]">
+<{foreach item=amount from=$block.amounts}>
+<option value="<{$amount.value}>"><{$amount.text}></option>
+<{/foreach}>
+</select>
+<input type="hidden" name="item[A][quantity]" value="1">
+<input type="hidden" name="item[A][shipping]" value="0.00">
+<input type="hidden" name="item[A][handling]" value="0.00">
+<input type="hidden" name="item[A][weight]" value="0.00">
+<input type="hidden" name="item[A][tax]" value="0">
+
+<!-- This is the footer of the invoice -->
+<input type="hidden" name="return" value="<{$xoops_url}>/modules/webcams/index.php">
+<input type="hidden" name="cancel" value="<{$xoops_url}>/modules/webcams/index.php">
+<input type="submit" name='submit' value="<{$smarty.const._SUBMIT}>" />
+</form>
+<{/if}>

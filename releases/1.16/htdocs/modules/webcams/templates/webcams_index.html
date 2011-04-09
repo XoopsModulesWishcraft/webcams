@@ -1,0 +1,131 @@
+<body onLoad="fillInValues();setTimeout('getSwfVer()',500);setTimeout('checkSilverlight()',1000);" />
+<div id="container">
+  <h2>Player 5.1</h2>
+  <p>
+	<strong>Features</strong><br>
+	  &#8226; Flash /  Silverlight  hybrid video chat player for high quality video and audio<br>
+	  &#8226; H.264 video &amp; Speex / MP3 / HE-AAC  audio capability using the Flash plugin <br>
+  	  &#8226; Windows Media Format using the Silverlight plugin<br>
+      &#8226; TwoWay cam feature<br> 
+      &#8226; Camlist uses AJAX to directly access our gateway for faster response time<br>
+      &#8226; Video chat window opens in lightbox or pop up window<br>      
+      &#8226; Video only mode ideal for non-chat sessions <br>
+      &#8226; Zoom and full screen video capability <br>
+      &#8226; Low real time delay ~1 second (non-buffered H.264) and ~ 4 seconds (buffered H.264)<br>
+      &#8226; Webcam list with category and Host search <br>
+      &#8226; MyFavs feature allows user to create their favorites list <br>
+      &#8226; Host bio, image gallery, schedule page <br>
+      &#8226; User can view his virtual wallet balance <br>
+      &#8226; Customizable using CSS and XML files, colors, text translation etc. <br>
+  </p>
+  <p><strong>Flash H.264 / Speex / MP3 / HE-AAC</strong><br>
+	  JustCamIt has the ability to stream high quality video in H.264 format over low bandwidth connections. 
+	Speex audio is the default audio and works fine for most applications with voice and background music. MP3 audio may be used as well if desired. HE-AAC audio is also available if higher quality audio is needed for feeds caring heavy music sound tracks. </p>
+  <div>
+    <div><a href="http://www.adobe.com/go/getflashplayer" target="_blank"><img src="images/get_adobe_flash_player.png" width="158" height="39" border="0"></a></div>
+    <div id="flashInstalled" style="line-height:20px;width:300px;vertical-align:middle;">Checking Flash Version .....</div>
+  </div>
+  <br>
+  <br>
+  <p><strong>Silverlight WMV / WMA </strong><br> 
+  JustCamIt also has the ability to use Windows Media Format if desired and our player uses the Silverlight plugin to play these video feeds. </p>
+	<div>
+	  <div><a href="http://go.microsoft.com/fwlink/?LinkID=149156&v=3.0.40624.0" style="text-decoration:"><img src="images/go.microsoft.com.png" border="0"></a></div>
+	  <div id="silverlightInstalled" style="line-height:20px;width:221px;vertical-align:middle;">Checking if Silverlight is installed.....</div>
+	</div>
+
+  <p>
+    <br>
+	<strong>Browser Compatibility</strong>
+	<br>
+	Flash H.264 plugin mode <br>
+	PC - IE, Firefox, Opera, Google Chrome, AOL, Netscape, Safari<br>
+	Mac - Firefox, Opera, Safari<br>
+  	Linux - Firefox, Mozilla, SeaMonkey</p>
+  <p>Silverlight 3  plugin mode <br>
+    PC - IE, FireFox, Google Chrome <br>
+    Mac - (Intel) Safari, FireFox  </p>
+  <h2>Player Integration</h2>
+  <p>
+    The player <span class="style5">requires 4 session cookies</span> to be set prior to its access. Below are text boxes that allow you to manually set these session cookies for testing purposes. Session cookies can be set using Javascript (as we did here) or by using server side scripting like PHP or ASP.<br>
+    <br>
+    It is recommended that these 4 session cookies be set on your login page right after verification of the member's username and password with your local database.<br>
+	<br>
+	Enter your account info and select optional parameters then press &quot;Set Session Cookies&quot; button. Then press the &quot;Test Player&quot; button.
+  </p>
+  <div>
+	<div class="row"><span class="label">account_id</span><input class="textbox1" id="accountID" type="text" name="accountID"/><span class="label2">Your Account ID</span></div>
+	<div class="row"><span class="label">gateway_ip</span><input class="textbox1" id="gatewayIP" type="text" name="gatewayIP"/>
+	<span class="label2">Admin Panel->MyAccount Gateway Info section </span></div>
+	<div class="row"><span class="label">member_user</span><input class="textbox1" id="memberUser" type="text" name="memberUser"/>
+	<span class="label2">Admin Panel->Users, existing username</span></div>
+	<div class="row"><span class="label">member_pass</span><input class="textbox1" id="memberPass" type="text" name="memberPass"/>
+	<span class="label2">Admin Panel->Users, existing user's password </span></div>
+	<div class="row"><span class="label">chatWindowMode</span><select class="listbox1" id="chatWindowModeSelect" name="chatWindowModeSelect"><option value="-1" selected>config.xml setting</option><option value="1">1</option><option value="2">2</option></select>
+	<span class="label2">optional 1=lightbox, 2=tabbed / popup </span></div>	
+	<div class="row"><span class="label">hideChat</span><select class="listbox1" id="hideChatSelect" name="hideChatSelect"><option value="-1" selected>config.xml setting</option><option value="0">0</option><option value="1">1</option></select><span class="label2">optional</span></div>	
+	<div class="button1"><input class="button2" type="button" value="Set Session Cookies" onClick="setSessionVars()"/></div><br>
+	<div class="button1"><input class="button2" type="button" value="Test Player - non iframe" onClick="window.open('index.php?op=camlist')"/></div><br>
+	<div class="button1"><input class="button2" type="button" value="Test Player - iframe" onClick="window.open('index.php?op=example')"/></div>
+  </div>
+  <p>
+  <br>
+	<strong>Direct Link Popup</strong>
+	You can also direct link the videochat page into a tab (popup window on non-tabbed browsers), bypassing the camlist. The 4 session cookies above would still need to be set and chatWindowMode=2 needs to be set in config/configuration.xml or via a cookie. See example below. <br> 
+	<br>
+	<span class="style2">&lt;a href=</span><span class="style3">&quot;javascript:void window.open('player5.1/videochat.html?host_name=testhost&amp;mode_request=1')&quot;</span><span class="style2">&gt;</span><span class="style4">Free Chat</span><span class="style2">&lt;/a&gt;</span><br>
+    <br>
+	Keyname mode_request corresponds to 1=free, 2=group, 3=private chat room modes. This will also set the session cookie variables host_name and mode_request.
+  </p>
+  <h2>Customizing the Player</h2> 
+  <p>
+    The player's appearance is controlled by a CSS file in the themes/ folder and the configuration.xml file  in the config/ folder. <br>
+    <br>
+    The default.css file in the themes/ folder controls all HTML elements in the player and the configuration.xml file controls the elements inside the Flash and Silverlight components as well as the text used. Both must be changed to apply a different theme.
+  </p>
+  <h2>Gateway API</h2>
+  <p>The following gateway API calls are available:<br>
+    <strong>cam_list_request</strong><br>
+    <strong>host_create</strong><br>
+    <strong>host_update</strong><br>
+    <strong>host_delete</strong><br>
+    <strong>host_info_request</strong><br>
+    <strong>host_profile_request</strong><br>
+    <strong>host_profile_update</strong><br>
+    <strong>host_stats_request</strong><br>
+    <strong>user_create</strong><br>
+    <strong>user_update</strong><br>
+    <strong>user_info_request</strong><br>
+    <strong>studio_create</strong><br>
+    <strong>studio_update</strong><br>
+    <strong>studio_info_request</strong> </p>
+	<p>
+    All API call samples are located in the api/php folder and require Curl / OpenSSL to handle the socket connections. All of these calls mimic the actions in our Admin panel. <br>
+    <br>
+    You can automatically create users in our system by using the  user_create API call.
+    The best place to issue this API call is on your login page right after you verify your member's username and password against your local database. You should then set the 4 session cookies for the player to use via Javascript or server side scripting.<br>
+    <br>
+    Usernames and passwords are limited to 20 characters with the following regular expression <span class="style3">preg_match('<span class="style5">/[^0-9a-zA-Z_-]/</span>',<span class="style4">$user</span>);</span> <br>
+    As a security measure it's recommended that the user password you provide us not be the actual password for this user in your system. <br>	
+  <br>
+    Using the user_update API call  you can add funds to your user's virtual wallet in our system which is used for pay per minute sessions. This allows you to use any merchant solution you wish.<br>
+    <br>
+    Additional notes are in the sample files.
+	</p>
+    <h2>Integration Notes</h2>
+  <p>
+    Embedding the player into an iframe is the recommended technique as this isolates the player from the rest of the page's DOM.<br>
+    Clients upgrading from previous versions to version 5.0 will need to re-integrate as the changes are too numerous to update older versions. <br>
+    Email support is offered at <a href="mailto:support@istreaming.com">support@istreaming.com</a> or <a href="mailto:support@esensualnetworks.com">support@esensualnetworks.com</a>
+  </p>
+  <h2>Update Player 5.0 to 5.1</h2>
+  <p><strong>1.</strong> Replace player5.0/flash/ with player5.1/flash/ SWF files.<br>
+    <strong>2.</strong> Replace player5.0/js/videochat.js with player5.1/js/videochat.js, <span class="style3">loadFlash()</span> function was altered to fix size bug in Opera </p>
+  <h2>License</h2>
+  <p>All software contained in this package is licensed to the clients of iStreaming Networks  for the sole purpose of integration and use of the iStreaming Networks Video Chat hosting service.<br>
+    <br>
+    Licensee is allowed to modify the software during integration but no support is given once the software has been modified. Licensee will assume full responsibility of any negative effects that may occur as a result of any software modification. <br>
+    <br>
+    Copyright 2010 iStreaming Networks LLC
+  </p>
+</div>

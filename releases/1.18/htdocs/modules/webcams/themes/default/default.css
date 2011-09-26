@@ -1,0 +1,446 @@
+/* http://kuler.adobe.com/ for color help*/
+body{
+	color: #757575;
+	margin:0px;
+	padding:0px;
+	width:100%;
+	height:100%;
+}
+
+.listbox_1{
+	border: 1px solid #A8A8A8;
+	color: #757575;
+	background-color:#FFFFFF;
+	font-size:11px;
+}
+.textbox_1{
+	border: 1px solid #A8A8A8;
+	color: #757575;
+	padding-left:2px;
+	background-color:#FFFFFF;
+	font-size:11px;
+	width:100px;
+}
+.container{  
+	margin:0 auto;
+	margin-top:20px;
+	width:800px;
+	background-color:#FFFFFF;
+	border-color: #A8A8A8;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	position:relative;
+	overflow:hidden;
+}
+
+/* camlist.html specific *************/
+#searchDiv { 
+	width:100%; 
+	height:27px;
+	border-bottom:1px solid #A8A8A8;
+	color:#757575; 
+	font-weight:bold; 
+	background-color:#F0F0F0;
+	background-image:url(../../themes/default/images/bar2.gif);
+}
+#searchSubDiv{
+	float:left;
+	margin-top:5px;
+} 
+#searchSubDiv *{
+	vertical-align:middle;
+}
+#categorySpan{
+	margin:0px 3px 0px 10px;
+}
+#searchSpan{
+	margin:0px 3px 0px 10px;
+}
+#balanceSpan{
+	font-size:10px;
+	font-weight:normal;
+	color:#A8A8A8;
+	margin-left:10px;
+}
+#pagingDiv {
+	width:300px;
+	height:27px;
+	line-height:27px;
+	float:right;
+}
+.paging {
+	float:right; 
+	text-align:center; 
+	font-weight:bold; 
+	height:27px;
+ 	line-height:27px;
+	width:20px; 
+	border-left:1px solid #A8A8A8;
+	background-color:#D6D6D6;
+	background-image:url(../../themes/default/images/bar2.gif);
+}
+.pagingNext {
+	cursor:default;
+}
+.pagingNextOver {
+	color:#FFFFFF;
+	background-color:#A8A8A8; 
+	cursor:pointer; 
+	background-image:url(../../themes/default/images/bar2_over.gif);
+}
+.pagingNumber {
+	cursor:default;
+}
+.pagingNumberOver {
+	color:#FFFFFF;
+	background-color:#A8A8A8; 
+	cursor:pointer; 
+	background-image:url(../../themes/default/images/bar2_over.gif);
+}
+.pagingPrev {
+	cursor:default;
+}
+.pagingPrevOver {
+	color:#FFFFFF;
+	background-color:#A8A8A8; 
+	cursor:pointer; 
+	background-image:url(../../themes/default/images/bar2_over.gif);
+}
+#camlistDiv {
+	width:770px; 
+	margin:0 auto;
+	padding:15px 15px 14px 17px;
+}
+#nocamsDiv {
+	height:300px; 
+	line-height:300px; 
+	font-weight:bold; 
+	font-size:14px; 
+	text-align:center;
+}
+.camlistBox {
+	float:left; 
+	width:245px; 
+	height:130px; 
+	margin:0px 4px 8px 4px; 
+	padding:0px;
+	border:1px solid #A8A8A8;
+	background-color:#F0F0F0;
+	overflow:hidden;
+}
+.camlistButton{
+	position:relative; 
+	width:100px; 
+	height:17px; 
+	margin:0px 0px 5px 4px; 
+	line-height:17px; 
+	cursor:default; 
+	text-align:center; 
+	font-weight:bold;
+	color:#757575;
+	background-color:#D6D6D6;
+	border:1px solid #A8A8A8;
+	background-image:url(../../themes/default/images/bar3.gif);
+}
+.camlistButtonOver{
+	position:relative; 
+	width:100px; 
+	height:17px; 
+	margin:0px 0px 5px 4px; 
+	line-height:17px; 
+	cursor:pointer; 
+	text-align:center; 
+	font-weight:bold; 
+	color:#757575; 
+	background-color:#FFFFFF;
+	border:1px solid #A8A8A8; 
+	background-image:url(../../themes/default/images/bar3_over.gif);
+}
+.hostName{
+	position:relative; 
+	height:20px; 
+	color:#FFFFFF;
+	text-align:center; 
+	font-weight:bold; 
+	line-height:20px; 
+	margin:0px 0px 9px 0px;
+	background-color:#A8A8A8;
+	border-bottom:1px solid #A8A8A8;
+	background-image:url(../../themes/default/images/bar4.gif);
+}
+.hostPic {
+	position:relative; 
+	float:left; 
+	height:90px; 
+	width:120px; 
+	margin:0px 0px 0px 9px;
+	border:1px solid #A8A8A8; 
+	cursor:default;
+}                                                                                                
+
+/* videochat.html specific ****************/
+.playerBody{
+	background-color:black;
+}
+#playerDiv, #playerDiv2{
+	border:1px solid #D0D0D0;
+	background-color:#757575;
+	position:absolute;
+	visibility:hidden;
+}	
+#header{
+	background-color:#A8A8A8;
+	height:22px;
+	background-image:url(../../themes/default/images/bar1.gif);
+}
+#container{
+	position:absolute;
+	background-color:#A8A8A8;
+	overflow:hidden;
+	margin:0px;
+	padding:0px 5px 5px 5px;
+}
+#logoDiv{
+	height:22px;
+	width:70px;
+	float:left;
+	background-image:url(../../themes/default/images/logo1.gif);
+}
+.closeButton{
+	float:right;
+	display:inline;
+	height:18px;
+	width:18px;
+	margin:2px;
+	background-color:#A8A8A8;
+	cursor:default;
+	background-image:url(../../themes/default/images/close1.gif);
+}
+.closeButtonOver{
+	float:right;
+	display:inline;
+	height:18px;
+	width:18px;
+	margin:2px;
+	background-color:#A8A8A8;
+	cursor:pointer;
+	background-image:url(../../themes/default/images/close1.gif);
+}
+#leftDiv{
+	float:left;
+	margin:0px;
+	padding:0px;
+	background-color:#000000;
+}
+
+#fchat{
+	float:left;
+	padding:0px;
+	margin-left:0px;
+	overflow:hidden;
+}
+.messages{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	color:#757575;
+	background-color:#FFFFFF;
+	text-align:center;
+}
+
+/* bio pics specific ************/
+
+#bioPicsNav { 
+	width:100%; 
+	height:27px;
+	border-bottom:1px solid #A8A8A8;
+	color:#757575; 
+	font-weight:bold; 
+	background-color:#F0F0F0;
+	background-image:url(../../themes/default/images/bar2.gif);
+}
+.navButtonLeft {
+	float:left; 
+	text-align:center; 
+	font-weight:bold; 
+	height:27px;
+ 	line-height:27px;
+	width:100px; 
+	border-right:1px solid #A8A8A8;
+	background-color:#D6D6D6;
+	background-image:url(../../themes/default/images/bar2.gif);
+}
+.navButtonLeftOver {
+	color:#FFFFFF;
+	background-color:#A8A8A8; 
+	cursor:pointer; 
+	background-image:url(../../themes/default/images/bar2_over.gif);
+}
+.navButtonRight {
+	float:right; 
+	text-align:center; 
+	font-weight:bold; 
+	height:27px;
+ 	line-height:27px;
+	width:100px; 
+	border-left:1px solid #A8A8A8;
+	background-color:#D6D6D6;
+	background-image:url(../../themes/default/images/bar2.gif);
+}
+.navButtonRightOver {
+	color:#FFFFFF;
+	background-color:#A8A8A8; 
+	cursor:pointer;
+	background-image:url(../../themes/default/images/bar2_over.gif);
+}
+#bioPicsDiv {
+	width:800px; 
+	margin:0 auto;
+	padding:5px 5px 5px 5px;
+	background-color:#FFFFFF;
+	overflow:hidden;
+}
+#bioPicsLeftDiv{
+	float:left;
+}
+#picDiv{
+	border:1px solid #A8A8A8;
+	margin:5px;
+	padding:5px;
+	background-color:#FFFFFF;
+}
+#picInnerDiv{
+	width:320px;
+	height:240px;
+}
+#picsDiv{
+	border:1px solid #A8A8A8;
+	margin:5px;
+	padding:10px;
+	margin-top:10px;
+	width:310px;
+	height:230px;
+	overflow:scroll;
+	background-color:#FFFFFF;
+}
+.thumb{
+	border:1px solid #A8A8A8;
+	margin:5px;
+}
+#floatingPicDiv{
+	border-color:#FFFFFF;
+	border-width:15px 15px 15px 15px;
+	border-style:solid;
+	background-color:#757575;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:#FFFFFF;
+	text-align:center;
+	font-weight:bold;
+	cursor:pointer;
+}
+#bioPicsRightDiv{
+	width:435px;
+	height:512px;
+	border:1px solid #A8A8A8;
+	float:left;
+	margin:5px;
+	padding:0px;
+}
+#bioHdrDiv{
+	height:20px;
+	line-height:20px;
+	font-weight:bold;
+	padding-left:10px;
+	background-color:#F0F0F0;
+	border-bottom:1px solid #A8A8A8;
+	background-image:url(../../themes/default/images/bar5.gif);
+}
+#myfavsUpdateDiv{
+	color:#A8A8A8;
+	font-size:10px;
+	font-weight:normal;
+	padding-right:5px;
+}
+#myfavsCB{
+	margin:0px 5px 0px 5px;
+}
+#bioDiv{
+	background-color:#FFFFFF;
+	padding:10px;
+	height:299px;
+	overflow:auto;
+}
+.bioRow{
+	line-height:20px;
+	clear:both;
+}
+.bioRowLabel{
+	font-weight:bold;
+}
+.bioRowContent{
+	margin-left:5px;
+}
+#ratesDiv{
+	height:20px;
+	line-height:20px;
+	padding-left:10px;
+	font-weight:bold;
+	background-color:#F0F0F0;
+	border-top:1px solid #A8A8A8;
+	background-image:url(../../themes/default/images/bar5.gif);
+}
+#groupRateTxt{
+	font-weight:normal;
+	margin-left:25px;
+}
+#privateRateTxt{
+	font-weight:normal;
+	margin-left:25px;
+}
+#schedHdrDiv{
+	height:20px;
+	line-height:20px;
+	font-weight:bold;
+	padding-left:10px;
+	background-color:#F0F0F0;
+	border-top:1px solid #A8A8A8;
+	border-bottom:1px solid #A8A8A8;
+	background-image:url(../../themes/default/images/bar5.gif);
+}
+#adjustedTxt{
+	color:#A8A8A8;
+	font-size:10px;
+	font-weight:normal;
+	padding-left:5px;
+}	
+#schedDiv{
+	height:129px;
+	background-color:#FFFFFF;
+	overflow:hidden;
+}
+.schedHourCell{
+	width:15px;
+	height:15px;
+	background-color:#D6D6D6;
+	text-align:center;
+	font-size:9px;
+}
+.schedDayCell{
+	height:15px;
+	background-color:#D6D6D6;
+	text-align:center;	
+}
+.schedCellOffline{
+	width:15px;
+	height:15px;
+	background-color:#F0F0F0;
+}
+.schedCellOnline{
+	width:15px;
+	height:15px;
+	background-color:#D6D6D6;
+}
+.schedRightSpacer{
+	background-color:#D6D6D6;
+}

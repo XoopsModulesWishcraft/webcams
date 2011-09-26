@@ -1,0 +1,28 @@
+<h1><{$smarty.const._wbc_am_users_h1}></h1>
+<p><{$smarty.const._wbc_am_users_p}></p>
+<div style="float:right;"><{$pagenav}></div>
+<table>
+	<tr class="head">
+		<th><{$userid_th}></th>
+		<th><{$firstname_th}></th>
+		<th><{$lastname_th}></th>
+		<th><{$postcode_th}></th>
+		<th><{$country_th}></th>
+		<th><{$email_th}></th>
+		<th><{$smarty.const._wbc_am_th_actions}></th>
+	</tr>
+	<{foreach item=user from=$users}>
+	<tr class="<{cycle values="even,odd"}>">
+		<td align='center'><{$user.user_id}></td>
+		<td align='center'><{$user.firstname}></td>
+		<td align='center'><{$user.lastname}></td>
+		<td><{$user.postcode}></td>
+		<td><{$user.country}></td>
+		<td><a href="mailto:<{$user.email}>"><{$user.email}></a></td>
+		<td align='center'><a href="<{$php_self}>?op=delete&fct=user&id=<{$user.id}>"><{$smarty.const._wbc_mi_action_delete}></a>&nbsp;<a href="<{$php_self}>?op=edit&fct=user&id=<{$user.id}>"><{$smarty.const._wbc_mi_action_edit}></a></td>
+	</tr>
+	<{/foreach}>
+	<tr class="foot">
+		<td colspan="7">&nbsp;</td>
+	</tr>
+</table>

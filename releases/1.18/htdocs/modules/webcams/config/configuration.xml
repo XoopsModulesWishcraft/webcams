@@ -1,0 +1,20 @@
+<?php
+	header ("content-type: text/xml");
+
+	include('../../../mainfile.php');
+	include('../../../class/template.php');
+	
+	xoops_loadLanguage('main', 'webcams');
+	
+	$GLOBALS['xoopsTpl'] = new XoopsTpl();
+	
+	$module_handler =& xoops_gethandler('module');
+	$config_handler =& xoops_gethandler('config');
+	
+	$xoMod = $module_handler->getByDirname('webcams');
+	$xoCon = $config_handler->getConfigList($xoMod->getVar('mid'));
+	
+	$GLOBALS['xoopsTpl']->assign('xoConfig',$xoCon);
+	$GLOBALS['xoopsTpl']->display('db:webcams_config_xml.html');
+	
+?>

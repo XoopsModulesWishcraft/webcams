@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^webcams/themes/(.*?)/(.*?)$																				modules/webcams/themes/$1/$2
+RewriteRule ^webcams/themes/(.*?)/images/(.*?)$																			modules/webcams/themes/$1/images/$2
+RewriteRule ^webcams/index,(.*?),(.*?),(.*?).html$ 																		modules/webcams/index.php?op=$1&hostname=$2&token=$3
+RewriteRule ^webcams/index,(.*?).html$ 																					modules/webcams/index.php?op=$1
+RewriteRule ^webcams/$				 																					modules/webcams/index.php?op=camlist

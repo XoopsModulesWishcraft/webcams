@@ -14,7 +14,7 @@
  * @package         Webcams
  * @since           2.4.0
  * @author          trabis <lusopoemas@gmail.com>
- * @version         $Id: core.php 3333 2009-08-27 10:46:15Z trabis $
+ * @version         $Id$
  */
 
 defined('XOOPS_ROOT_PATH') or die('Restricted access');

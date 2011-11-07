@@ -16,7 +16,7 @@
  * @since           2.0.0
  * @author          Kazumi Ono (AKA onokazu) http://www.myweb.ne.jp/, http://jp.xoops.org/
  * @author          Taiwen Jiang <phppp@users.sourceforge.net>
- * @version         $Id: formselect.php 4897 2010-06-19 02:55:48Z phppp $
+ * @version         $Id$
  */
 defined('XOOPS_ROOT_PATH') or die('Restricted access');
 
